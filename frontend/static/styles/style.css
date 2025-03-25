@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  /* height: 90vh; */
+  /* background-color: #f9f9f9; */
+  position: relative;
+}
+
+.hero-content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.hero-content h1 .highlight {
+  color: #e50914;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+.hero-content .cta button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Style for the DP container */
+.dp-container {
+  perspective: 1000px; /* Enables 3D perspective for the flip effect */
+  display: inline-block;
+  width: 240px; /* Match the DP width */
+  height: 240px; /* Match the DP height */
+}
+
+/* Style for the DP */
+.dp {
+  background-color: #6670ff; /* Background color */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  transform-style: preserve-3d; /* Enables 3D transformations */
+  transition: transform 0.6s ease; /* Smooth transition for the flip effect */
+  position: relative;
+}
+
+/* Front side of the DP */
+.dp .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back side when the front is visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dp .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the front side when the back is visible */
+  background-color: #fff; /* Background color for the back side */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); /* Initially rotate the back side */
+
+}
+
+
+/* Flip effect on hover */
+.dp-container:hover .dp {
+  transform: rotateY(180deg); /* Flips the DP on hover */
+}
+.hero-content .cta button:hover {
+  background-color: #d40813;
+}
+
+/* Floating Shapes */
+
+.floating-shapes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.shape4, .shape6 {
+  right: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: float 5s ease-in-out infinite;
+}
+
+.shape5,
+.shape2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: float 4s ease-in-out infinite;
+}
+
+.shape1, .shape3 {
+  position: relative;
+  left: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: float 5s ease-in-out infinite;
+    overflow: hidden; 
+}
+
+.shape1, .shape4{
+    top: 50px;
+}
+
+.shape3, .shape6{
+    bottom: 50px;
+}
+
+img {
+  width: 260px;
+  margin: 10px;
+  padding: 0px 30px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Section Styles */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p {
+  font-size: 16px;
+  color: #555;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

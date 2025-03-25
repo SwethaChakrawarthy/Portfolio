@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}" />
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <section id="home" class="hero">
+    <div class="floating-shapes">
+      <div class="shape1">
+        <img src="{{ url_for('static', filename='images/triangle.avif') }}" alt="Shape 1" />
+      </div>
+      <div class="shape2">
+        <img src="{{ url_for('static', filename='images/ball.avif') }}" alt="Shape 2" />
+      </div>
+      <div class="shape3">
+        <img src="{{ url_for('static', filename='images/cylinder.avif') }}" alt="Shape 2" />
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Swetha</span></h1>
+      <p>HTML5/CSS3 Mastery</p>
+      <div class="dp-container">
+        <div class="dp">
+          <!-- Front side -->
+          <div class="front">
+            <img src="{{ url_for('static', filename='images/Dp.png') }}" alt="Hero Image" />
+          </div>
+          <!-- Back side -->
+          <div class="back">
+            <div class="'back-svg">
+              <svg class="transform-origin-center-center" viewBox="0 0 100 100" overflow="visible"
+                style="width: 100%; height: 100%; position: absolute; inset: 0px; transform-origin: center center; will-change: transform; transform: rotate(34.974deg);">
+                <path id="curve-wnxkz4" d="M 0 50 L 0 50 A 1 1 0 0 1 100 50 L 100 50 L 100 50 A 1 1 0 0 1 0 50 L 0 50"
+                  stroke-width="none" fill="transparent"></path><text>
+                  <textPath href="#curve-wnxkz4" startOffset="0" dominant-baseline="Hanging"
+                   style="font-family: 'Public Sans', sans-serif; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: 0em; line-height: 1em; word-spacing: 7px; fill: black;">
+                    ✦ SCROLL DOWN ✦ AND KNOW ME BETTER
+                    <animate attributeName="startOffset" from="0%" to="0%" begin="0s"
+                      dur="20s" repeatCount="indefinite"/>
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta">
+      <button>Let's Work Together!</button>
+    </div>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape4">
+        <img src="{{ url_for('static', filename='images/star.avif') }}" alt="Shape 3" />
+      </div>
+      <div class="shape5">
+        <img src="{{ url_for('static', filename='images/cube1.avif') }}" alt="Shape 4" />
+      </div>
+      <div class="shape6">
+        <img src="{{ url_for('static', filename='images/cube2.avif') }}" alt="Shape 4" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Swetha Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='scripts/header.js') }}"></script>
+</body>
+
+</html>

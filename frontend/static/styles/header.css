@@ -1,0 +1,84 @@
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 1000;
+    width: 600px;
+    top: 20px;
+    filter: none;
+    /* left: 33.3%; */
+    border-radius: 20px;
+}
+
+header{
+    top: 20px;
+
+}
+
+.header-container {
+    position: sticky;
+    backdrop-filter: blur(4px);
+    top: 0px;
+    padding: 20px 10px 0px 10px ;
+    display: flex;
+    /* min-width: 100vw; */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    position: relative;
+}
+
+header nav ul li {
+    position: relative; /* Required for background effect */
+    overflow: hidden; /* Ensures background stays within bounds */
+    border-radius: 20px; /* Adds rounded corners to the hover effect */
+    padding: 5px 15px; /* Adds padding for better spacing */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+    z-index: 1; /* Ensures the text stays above the background */
+    transition: ease 0.3s;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;  
+    position: relative;
+    z-index: 2; 
+} 
+
+header nav ul li:not(.active):hover{
+    transform: translateY(-5px); /* Moves the text upward */
+    transition: ease 0.3s; /* Smooth upward movement */
+}
+
+header nav ul li.active a {
+    /* background-color: #f94706; Changes the background color */
+    color: #fff; /* Changes the text color */
+}
+
+
+
+.nav-tracker {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 80px; /* updated via JS */
+  height: 40px;
+  background-color: #f94706;
+  border-radius: 20px;
+  z-index: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
